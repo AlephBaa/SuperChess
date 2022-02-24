@@ -13,7 +13,7 @@ public abstract class Result {
 			}
 		}
 		// TODO define a special exception for this situation
-		throw new Exception();
+		throw new Exception("Player not found");
 	}
 
 	public void addPlayerScore(Player p, int score) {

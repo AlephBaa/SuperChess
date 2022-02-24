@@ -1,17 +1,10 @@
 package baa.aleph.superchess.model;
 
-public abstract class Player {
-    private String color;
-    private String name;
-    private boolean playing;
-    private boolean myTurn;
-
-    public Player(String color, String name, boolean playing, boolean myTurn) {
-        this.color = color;
-        this.name = name;
-        this.playing = playing;
-        this.myTurn = myTurn;
-    }
+public class Player {
+    protected String color;
+    protected String name;
+    protected Boolean playing;
+    protected Boolean myTurn;
 
     public String getColor() {
         return color;
@@ -29,19 +22,19 @@ public abstract class Player {
         this.name = name;
     }
 
-    public boolean isPlaying() {
+    public Boolean isPlaying() {
         return playing;
     }
 
-    public void setPlaying(boolean playing) {
+    public void setPlaying(Boolean playing) {
         this.playing = playing;
     }
 
-    public boolean isMyTurn() {
+    public Boolean isMyTurn() {
         return myTurn;
     }
 
-    public void setMyTurn(boolean myTurn) {
+    public void setMyTurn(Boolean myTurn) {
         this.myTurn = myTurn;
     }
 }

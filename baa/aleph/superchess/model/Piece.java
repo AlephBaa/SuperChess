@@ -1,27 +1,11 @@
 package baa.aleph.superchess.model;
 
-public abstract class Peice {
-	private String name;
-	private boolean active;
-	private boolean hide;
-	private Square currentSqure;
-	private Player player;
+public class Piece {
 
-	public Peice(String name, boolean active, boolean hide, Square currentSqure, Player player) {
-		this.name = name;
-		this.active = active;
-		this.hide = hide;
-		this.currentSqure = currentSqure;
-		this.player = player;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+	protected Boolean active;
+	protected Boolean hide;
+	protected Square currentSqure;
+	protected Player player;
 
 	public boolean isActive() {
 		return active;
