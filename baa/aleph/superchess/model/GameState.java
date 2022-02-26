@@ -37,7 +37,7 @@ public class GameState {
 
 	public boolean isLegal(Action action) {
 		for (Rule rule : rules) {
-			if (rule.isLegal(action) < 0) {
+			if (rule.isLegal(action).equals(Rule.Legality.ILLEGAL)) {
 				return false;
 			}
 		}
@@ -46,7 +46,7 @@ public class GameState {
 
 	// apply the changes of the action on this GameState
 	public void act(Action action) {
-		action.act(this);
+		action.perform();
 		addHistory();
 	}
 

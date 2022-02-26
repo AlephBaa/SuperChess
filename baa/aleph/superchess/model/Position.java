@@ -10,7 +10,7 @@ public class Position {
 		return squares;
 	}
 
-	protected void addSquare(Square square) {
+	public void addSquare(Square square) {
 		squares.add(square);
 	}
 }

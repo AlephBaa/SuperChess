@@ -4,7 +4,7 @@ import java.util.List;
 
 
 public abstract class Result {
-	private List<Pair> playerScores;
+	protected List<Pair> playerScores;
 
 	public int getPlayerScore(Player player) throws Exception {
 		for (Pair p : playerScores) {

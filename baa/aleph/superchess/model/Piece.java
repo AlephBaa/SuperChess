@@ -1,34 +1,16 @@
 package baa.aleph.superchess.model;
 
-public class Piece {
+public abstract class Piece {
 
-	protected Boolean active;
-	protected Boolean hide;
-	protected Square currentSqure;
+	protected Square currentSquare;
 	protected Player player;
 
-	public boolean isActive() {
-		return active;
-	}
-
-	public void setActive(boolean active) {
-		this.active = active;
-	}
-
-	public boolean isHide() {
-		return hide;
-	}
-
-	public void setHide(boolean hide) {
-		this.hide = hide;
-	}
-
 	public void goToSquare(Square currentSqure) {
-		this.currentSqure = currentSqure;
+		this.currentSquare = currentSqure;
 	}
 
-	public Square getCurrentSqure() {
-		return currentSqure;
+	public Square getCurrentSquare() {
+		return currentSquare;
 	}
 
 	public Player getPlayer() {
@@ -38,4 +20,6 @@ public class Piece {
 	public void setPlayer(Player player) {
 		this.player = player;
 	}
+
+	public abstract boolean canPerform(Action action);
 }

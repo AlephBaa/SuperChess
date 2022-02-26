@@ -5,6 +5,11 @@ public class Square {
     protected Integer y;
     protected Piece piece;
 
+    public Square(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
     public Square(int x, int y, Piece piece) {
         this.x = x;
         this.y = y;
